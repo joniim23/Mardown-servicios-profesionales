@@ -1,0 +1,20 @@
+import profesionales.*
+import tiposDeProfesionales.*
+import universidades.*
+import provincias.*
+import empresas.*
+
+describe "tests del ejercicio" 
+{
+	const unsam = new Universidad( provincia = entreRios , honorarioRecomendado = 4000 )
+	const joni = new Profesional( tipoDeProfesional = tipoVinculadosAUnaUniversidad , universidadQueEstudio = unsam)
+	
+	
+	test "honorarios de joni" 
+	{
+		
+		assert.equals(4000, joni.honorarioPorHora())
+	}	
+
+}
+
